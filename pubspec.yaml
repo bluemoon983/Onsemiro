@@ -19,6 +19,7 @@ flutter:
     - assets/치매.png
     - assets/온새미로.png
     - assets/온새미로노랑.png
+    - assets/온새미로고.png
   uses-material-design: true
 
 dev_dependencies:

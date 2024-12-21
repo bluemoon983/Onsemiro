@@ -14,6 +14,8 @@ class MainScreens extends StatefulWidget {
 
 class _MainScreensState extends State<MainScreens> {
   int _currentIndex = 0; // 현재 선택된 인덱스
+  final PageController _pageController = PageController(); // PageView 컨트롤러
+
   final List<Widget> _pages = [
     KickUi(),
     LocationUi(),
@@ -23,9 +25,42 @@ class _MainScreensState extends State<MainScreens> {
   ];
 
   @override
+  void dispose() {
+    _pageController.dispose(); // 리소스 정리
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          // 페이지 내용
+          PageView(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() {
+                _currentIndex = index;
+              });
+            },
+            children: _pages,
+          ),
+          // 왼쪽 상단 이미지
+          Positioned(
+            top: 20, // 상단 여백
+            left: 20, // 왼쪽 여백
+            child: SizedBox(
+              width: 150, // 원하는 가로 크기 설정
+              height: 150, // 원하는 세로 크기 설정
+              child: Image.asset(
+                'assets/온새미로고.png', // 이미지 경로
+                fit: BoxFit.contain, // 이미지의 비율을 유지하며 크기를 맞춤
+              ),
+            ),
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: const Color(0xFFFDE047), // 선택된 아이템 색상 설정
@@ -35,6 +70,11 @@ class _MainScreensState extends State<MainScreens> {
           setState(() {
             _currentIndex = index; // 인덱스 업데이트
           });
+          _pageController.animateToPage(
+            index,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+          );
         },
         items: const [
           BottomNavigationBarItem(
@@ -69,7 +109,6 @@ class _MainScreensState extends State<MainScreens> {
           ),
         ],
       ),
-      body: _pages[_currentIndex], // 현재 선택된 화면 표시
     );
   }
 }
