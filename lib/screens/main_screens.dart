@@ -81,7 +81,7 @@ class _MainScreensState extends State<MainScreens> {
             icon: Icon(
               Icons.timelapse,
             ),
-            label: '우리만의 킥',
+            label: '추억 회상',
           ),
           BottomNavigationBarItem(
             icon: Icon(

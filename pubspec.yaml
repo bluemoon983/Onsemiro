@@ -20,6 +20,16 @@ flutter:
     - assets/온새미로.png
     - assets/온새미로노랑.png
     - assets/온새미로고.png
+    - assets/Frame 198.png
+    - assets/Frame 201.png
+    - assets/Frame 202.png
+    - assets/Frame 203.png
+    - assets/Frame 204.png
+    - assets/Frame 205.png
+    - assets/Frame 206.png
+    - assets/지도.png
+    - assets/회상.png
+    - assets/보호.png
   uses-material-design: true
 
 dev_dependencies:

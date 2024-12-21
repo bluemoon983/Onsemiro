@@ -6,21 +6,88 @@ class ProfileUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('마이페이지 화면'),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => LoginScreens()),
-              );
-            },
-            child: Text('로그아웃'),
-          ),
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 80, // 원형 아바타 크기
+              backgroundImage: AssetImage("assets/Ralo.png"), // 이미지 경로
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              '박찬호', // 사용자 이름
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // 프로필 수정 로직 추가
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8), // 둥근 모서리
+                ),
+                backgroundColor: Color(0xFFFDE047), // 버튼 색상
+                minimumSize: const Size(200, 50),
+                elevation: 5, // 버튼 그림자 효과
+              ),
+              child: const Text(
+                '프로필 수정하기',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            // 로그아웃 버튼
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreens()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                backgroundColor: Colors.red, // 빨간색으로 눈에 띄게
+                minimumSize: const Size(200, 50),
+                elevation: 5,
+              ),
+              child: const Text(
+                '로그아웃',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            const SizedBox(height: 15),
+            // 탈퇴하기 버튼
+            TextButton(
+              onPressed: () {
+                // 탈퇴 로직 추가
+              },
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.red,
+                textStyle: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              child: const Text('탈퇴하기'),
+            ),
+          ],
+        ),
       ),
     );
   }

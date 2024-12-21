@@ -5,6 +5,19 @@ class LocationUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('위치 공유 화면'));
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 120,
+            ),
+            Divider(),
+            Image.asset("assets/Frame 198.png"),
+            Image.asset("assets/보호.png"),
+          ],
+        ),
+      ),
+    );
   }
 }
