@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onsemiro/screens/join_screens.dart';
+import 'package:onsemiro/screens/main_screens.dart';
 
 class LoginScreens extends StatelessWidget {
   const LoginScreens({super.key});
@@ -92,6 +93,12 @@ class LoginScreens extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // 로그인 로직 추가
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainScreens(), // MainScreens로 이동
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(333, 50),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onsemiro/screens/main_screens.dart';
+import 'package:onsemiro/screens/test_screens.dart';
 
 class JoinPatientsScreen extends StatelessWidget {
   const JoinPatientsScreen({super.key});
@@ -29,7 +29,7 @@ class JoinPatientsNameScreen extends StatelessWidget {
       body: const JoinPatientsForm(
         title: "이름",
         hintText: "이름을 입력하세요",
-        nextScreen: MainScreens(),
+        nextScreen: TestScreens(),
       ),
     );
   }
