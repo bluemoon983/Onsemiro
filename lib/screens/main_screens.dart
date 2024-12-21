@@ -17,9 +17,9 @@ class _MainScreensState extends State<MainScreens> {
   final PageController _pageController = PageController(); // PageView 컨트롤러
 
   final List<Widget> _pages = [
-    KickUi(),
+    MainUi(), // 메인 화면
     LocationUi(),
-    MainUi(),
+    KickUi(), // 추억 회상
     BrainUi(),
     ProfileUi(),
   ];
@@ -79,9 +79,9 @@ class _MainScreensState extends State<MainScreens> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.timelapse,
+              Icons.home, // 메인 화면 아이콘
             ),
-            label: '추억 회상',
+            label: '메인 화면',
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -91,9 +91,9 @@ class _MainScreensState extends State<MainScreens> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.timelapse, // 추억 회상 아이콘
             ),
-            label: '메인 화면',
+            label: '추억 회상',
           ),
           BottomNavigationBarItem(
             icon: Icon(

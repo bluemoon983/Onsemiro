@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onsemiro/screens/login_screens.dart';
+import 'package:onsemiro/ui/profile_correction_ui.dart';
 
 class ProfileUi extends StatelessWidget {
   const ProfileUi({super.key});
@@ -26,7 +27,11 @@ class ProfileUi extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // 프로필 수정 로직 추가
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ProfileCorrectionUi()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
