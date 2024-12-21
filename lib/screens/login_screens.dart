@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onsemiro/screens/join_screens.dart';
 
 class LoginScreens extends StatelessWidget {
   const LoginScreens({super.key});
@@ -90,8 +91,7 @@ class LoginScreens extends StatelessWidget {
                   // 로그인 로직 추가
                 },
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(333, 20),
-                  maximumSize: Size(333, 50),
+                  minimumSize: Size(333, 50),
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xFFFDE047), // 텍스트 색상
                   padding: EdgeInsets.symmetric(
@@ -102,7 +102,7 @@ class LoginScreens extends StatelessWidget {
                 ),
                 child: const Text(
                   "로그인",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -113,14 +113,22 @@ class LoginScreens extends StatelessWidget {
                 width: 300,
               ),
               TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "회원가입",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => JoinScreens(),
+                    ), // JoinScreens로 이동
+                  );
+                },
+                child: Text(
+                  "회원가입",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ],
           )
         ],
