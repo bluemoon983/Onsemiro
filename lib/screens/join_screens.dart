@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:onsemiro/screens/join_guardians_screens.dart';
+import 'package:onsemiro/screens/join_patients_screens.dart';
 
 class JoinScreens extends StatelessWidget {
   const JoinScreens({super.key});
@@ -93,31 +95,6 @@ class JoinScreens extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-// 예시로 추가할 화면들
-class JoinGuardiansScreen extends StatelessWidget {
-  const JoinGuardiansScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('보호자 화면')),
-      body: Center(child: Text('보호자 화면입니다.')),
-    );
-  }
-}
-
-class JoinPatientsScreen extends StatelessWidget {
-  const JoinPatientsScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('치매 환자 화면')),
-      body: Center(child: Text('치매 환자 화면입니다.')),
     );
   }
 }
