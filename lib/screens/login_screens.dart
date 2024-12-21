@@ -19,7 +19,7 @@ class LoginScreens extends StatelessWidget {
                 width: 100,
               ),
               Image.asset(
-                "assets/Ralo.png",
+                "assets/온새미로.png",
                 width: 200,
                 height: 200,
                 fit: BoxFit.cover,

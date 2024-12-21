@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/Ralo.png', // 로고 이미지 경로
+              'assets/온새미로.png', // 로고 이미지 경로
               height: 100,
             ),
             const SizedBox(height: 20),
