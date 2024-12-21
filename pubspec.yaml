@@ -30,6 +30,13 @@ flutter:
     - assets/지도.png
     - assets/회상.png
     - assets/보호.png
+    - assets/Frame 215.png
+    - assets/Frame 216.png
+    - assets/Frame 217.png
+    - assets/image 2.png
+    - assets/절반.png
+    - assets/색.png
+    - assets/단풍.jpg
   uses-material-design: true
 
 dev_dependencies:

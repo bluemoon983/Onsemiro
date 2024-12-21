@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:onsemiro/screens/drawing_screens.dart';
+import 'package:onsemiro/screens/dustks_screens.dart';
+import 'package:onsemiro/screens/half_screens.dart';
+import 'package:onsemiro/screens/song_screens.dart';
+import 'package:onsemiro/screens/word_screens.dart';
+import 'package:onsemiro/screens/writing_screens.dart';
 
 class BrainUi extends StatelessWidget {
   const BrainUi({super.key});
@@ -19,7 +25,16 @@ class BrainUi extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Image.asset("assets/Frame 201.png"),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DrawingScreens()),
+                        );
+                      },
+                      child: Image.asset("assets/Frame 201.png"),
+                    ),
                     SizedBox(height: 10),
                     Text(
                       "색칠 하기",
@@ -32,7 +47,16 @@ class BrainUi extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Image.asset("assets/Frame 202.png"),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DustksScreens()),
+                        );
+                      },
+                      child: Image.asset("assets/Frame 202.png"),
+                    ),
                     SizedBox(height: 10),
                     Text(
                       "연산 하기",
@@ -52,7 +76,16 @@ class BrainUi extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Image.asset("assets/Frame 203.png"),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HalfScreens()),
+                        );
+                      },
+                      child: Image.asset("assets/Frame 203.png"),
+                    ),
                     SizedBox(height: 10),
                     Text(
                       "그림 분류하기",
@@ -65,7 +98,16 @@ class BrainUi extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Image.asset("assets/Frame 204.png"),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WordScreens()),
+                        );
+                      },
+                      child: Image.asset("assets/Frame 204.png"),
+                    ),
                     SizedBox(height: 10),
                     Text(
                       "단어 맞추기",
@@ -85,7 +127,16 @@ class BrainUi extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Image.asset("assets/Frame 205.png"),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SongScreens()),
+                        );
+                      },
+                      child: Image.asset("assets/Frame 205.png"),
+                    ),
                     SizedBox(height: 10),
                     Text(
                       "노래 듣기",
@@ -98,7 +149,16 @@ class BrainUi extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Image.asset("assets/Frame 206.png"),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WritingScreens()),
+                        );
+                      },
+                      child: Image.asset("assets/Frame 206.png"),
+                    ),
                     SizedBox(height: 10),
                     Text(
                       "일기 쓰기",
